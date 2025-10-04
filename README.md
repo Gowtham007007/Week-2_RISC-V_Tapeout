@@ -1,4 +1,8 @@
-# 🌟 Week 2: System on Chip (SoC) Design – Theory & Practical Exploration
+<div align="center">
+    
+# 🌟✨ Week 2: System on Chip (SoC) Design – Theory & Practical Exploration
+
+</div> <p align="center"> <img src="https://img.shields.io/badge/Topic-SoC-blue?style=for-the-badge&logo=arduino" /> <img src="https://img.shields.io/badge/Language-Verilog-red?style=for-the-badge&logo=verilog" /> <img src="https://img.shields.io/badge/Simulation-GTKWave-purple?style=for-the-badge&logo=gnuplot" /> <img src="https://img.shields.io/badge/Tools-Icarus%20Verilog-green?style=for-the-badge&logo=github" /> <img src="https://img.shields.io/badge/OS-Linux%20%7C%20macOS-orange?style=for-the-badge&logo=linux" /> <img src="https://img.shields.io/badge/Project-VSDBabySoC-red?style=for-the-badge&logo=riscv" /> </p>
 
 🎉 **Welcome to Week 2 of the SoC Design Journey!**
 
