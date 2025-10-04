@@ -1,132 +1,201 @@
-<div align = center >
-  
-   # 🌈✨ Task 2 – Pre-Synthesis Simulation of VSDBabySoC
+<div align="center">
+
+# 🌈✨ Task 2 – Pre-Synthesis Simulation of VSDBabySoC
+
 </div>
-<p align="center"> <img src="https://img.shields.io/badge/Language-Verilog-blue?style=for-the-badge&logo=verilog" /> <img src="https://img.shields.io/badge/Simulator-Icarus%20Verilog-green?style=for-the-badge&logo=github" /> <img src="https://img.shields.io/badge/Waveform-GTKWave-purple?style=for-the-badge&logo=gnuplot" /> <img src="https://img.shields.io/badge/OS-Linux%20%7C%20macOS-orange?style=for-the-badge&logo=linux" /> <img src="https://img.shields.io/badge/Project-VSDBabySoC-red?style=for-the-badge&logo=riscv" /> </p>
+<p align="center"> 
+  <img src="https://img.shields.io/badge/Language-Verilog-blue?style=for-the-badge&logo=verilog" /> 
+  <img src="https://img.shields.io/badge/Simulator-Icarus%20Verilog-green?style=for-the-badge&logo=github" /> 
+  <img src="https://img.shields.io/badge/Waveform-GTKWave-purple?style=for-the-badge&logo=gnuplot" /> 
+  <img src="https://img.shields.io/badge/OS-Linux%20%7C%20macOS-orange?style=for-the-badge&logo=linux" /> 
+  <img src="https://img.shields.io/badge/Project-VSDBabySoC-red?style=for-the-badge&logo=riscv" /> 
+</p>
+
+---
 
 ## 👋 Welcome to Task 2!
 
-In this stage of your SoC Design Journey 🚀, we perform a Pre-Synthesis Simulation of the VSDBabySoC using Icarus Verilog 🧠 and GTKWave 📊.
-This task validates functional behavior before synthesis 🧩, ensuring our RISC-V–based SoC behaves exactly as intended.
+In this stage of our **SoC Design Journey 🚀**, we perform a **Pre-Synthesis Simulation** of the **VSDBabySoC** using **Icarus Verilog 🧠** and **GTKWave 📊**.
 
-🏗️ Step 1: Environment Setup
-## 📂 Navigate to the project directory
-cd ~/Desktop/VLSI/VSDBabySoC
+This task validates **functional behavior before synthesis 🧩**, ensuring our **RISC-V–based SoC** behaves exactly as intended.
 
-## 🌐 Clone the repository
-git clone https://github.com/manili/VSDBabySoC.git
+---
 
+## 🏗️ Step 1: Environment Setup
 
-🖼️ [📸 Add your screenshot of successful cloning here]
+### 📂 Navigate to the Project Directory
 
-🧩 Step 2: Python Virtual Environment Setup
-## 🔧 Install dependencies
-sudo apt update
-sudo apt install python3-venv python3-pip
+<div style="background-color:#FFF0F5; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>cd ~/Desktop/VLSI/VSDBabySoC</pre>
+</div>
 
-## 🪄 Create & activate virtual environment
-cd ~/VLSI/VSDBabySoC/
+### 🌐 Clone the Repository
+
+<div style="background-color:#F0FFF0; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>git clone https://github.com/manili/VSDBabySoC.git</pre>
+</div>
+
+🔗 **Image Reference:** [Command 1 Screenshot](https://github.com/Gowtham007007/Week-2_RISC-V_Tapeout/blob/main/Images/command1.png)
+
+---
+
+## 🧩 Step 2: Python Virtual Environment Setup
+
+### 🔧 Install Dependencies
+
+<div style="background-color:#FFF8DC; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>sudo apt update
+sudo apt install python3-venv python3-pip</pre>
+</div>
+
+### 🪄 Create & Activate Virtual Environment
+
+<div style="background-color:#F0FFFF; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>cd ~/VLSI/VSDBabySoC/
 python3 -m venv sp_env
-source sp_env/bin/activate
+source sp_env/bin/activate</pre>
+</div>
 
-## ⚡ Install SandPiper-SaaS
-pip install pyyaml click sandpiper-saas
+### ⚡ Install SandPiper-SaaS
 
-## 🧠 Convert TL-Verilog → Verilog
-sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
+<div style="background-color:#FFE4E1; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>pip install pyyaml click sandpiper-saas</pre>
+</div>
 
+### 🧠 Convert TL-Verilog → Verilog
 
-🖼️ [📸 Add your SandPiper conversion result image here]
+<div style="background-color:#F5F5DC; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/</pre>
+</div>
 
-⚙️ Step 3: Pre-Synthesis Simulation Process
-## 🗂️ Go to module directory
-cd VLSI/VSDBabySoC/src/module
+🔗 **Image Reference:** [Command 2 Screenshot](https://github.com/Gowtham007007/Week-2_RISC-V_Tapeout/blob/main/Images/command2.png)
 
-## 🏗️ Run Icarus Verilog simulation
-iverilog \
+💡 **Tip:** Make sure your virtual environment is **activated** before running SandPiper commands. ✅
+
+---
+
+## ⚙️ Step 3: Pre-Synthesis Simulation Process
+
+### 🗂️ Go to Module Directory
+
+<div style="background-color:#FFFACD; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>cd VLSI/VSDBabySoC/src/module</pre>
+</div>
+
+### 🏗️ Run Icarus Verilog Simulation
+
+<div style="background-color:#E6E6FA; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>iverilog \
   -o /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out \
   -DPRE_SYNTH_SIM \
   -I /home/username/Desktop/VLSI/VSDBabySoC/src/include \
   -I /home/username/Desktop/VLSI/VSDBabySoC/src/module \
-  /home/username/Desktop/VLSI/VSDBabySoC/src/module/testbench.v
+  /home/username/Desktop/VLSI/VSDBabySoC/src/module/testbench.v</pre>
+</div>
 
-## 📦 Create output directory
-mkdir -p /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim
+### 📦 Create Output Directory
 
-## ✅ Verify build output
-ls -l /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out
+<div style="background-color:#FFF0F5; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>mkdir -p /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim</pre>
+</div>
 
-## ▶️ Execute simulation
-vvp /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out
+### ✅ Verify Build Output
 
-## 🌈 View in GTKWave
-gtkwave pre_synth_sim.vcd
+<div style="background-color:#F0FFF0; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>ls -l /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out</pre>
+</div>
 
+### ▶️ Execute Simulation
 
-🖼️ [📸 Add your GTKWave screenshot here]
+<div style="background-color:#FFF8DC; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>vvp /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out</pre>
+</div>
 
-🌟 Waveform Analysis
+### 🌈 View in GTKWave
 
-🕒 REF – Stable clock signal
-⚙️ OUT – Toggles with system logic
-🔄 reset – Remains low (active operation)
-🚫 ENb_VCO – High (disabled state)
-❌ ENb_CP – Undefined (x) – charge pump inactive
-⚡ VREFH = 3.3 V, VREFL = 0 V – Reference levels ok
+<div style="background-color:#F0FFFF; border-radius:12px; padding:10px; margin:8px 0;">
+<pre>gtkwave pre_synth_sim.vcd</pre>
+</div>
 
-🖼️ [📸 Add REF/OUT waveform image here]
+🔗 **Image Reference:** [Waveform Screenshot](https://github.com/Gowtham007007/Week-2_RISC-V_Tapeout/blob/main/Images/vsdwave.png)
 
-🎛️ DAC Module Observation
+---
 
-✨ Inside vsdbabysoc_tb testbench:
+## 🌟 Waveform Analysis
 
-🔢 D[9:0] and Dext[10:0] → digital inputs changing actively
+| Signal | Status | Meaning |
+| --- | --- | --- |
+| 🕒 REF | Stable | Reference clock |
+| ⚙️ OUT | Toggling | Shows system logic activity |
+| 🔄 reset | Low | System active (not in reset) |
+| 🚫 ENb_VCO | High | VCO block disabled |
+| ❌ ENb_CP | Undefined | Charge pump inactive |
+| ⚡ VREFH/VREFL | 3.3 V / 0 V | Reference levels OK |
 
-🟢 EN = 1 → DAC enabled
+---
 
-🌊 OUT → analog values ( e.g., 0.396 → 0.343 )
+## 🎛️ DAC Module Observation
 
-⚡ VREFH = 1, VREFL = 0 → proper reference
+✨ Inside `vsdbabysoc_tb` testbench:
 
-✅ Confirms correct digital-to-analog conversion.
+- 🔢 `D[9:0]` and `Dext[10:0]` → Digital inputs changing actively
+- 🟢 `EN = 1` → DAC enabled
+- 🌊 `OUT` → Analog values (e.g., `0.396 → 0.343`)
+- ⚡ `VREFH = 1`, `VREFL = 0` → Proper reference
 
-🖼️ [📸 Add DAC waveform image here]
+✅ Confirms correct **digital-to-analog conversion**.
 
-🧠 Analog Output Visualization in GTKWave
-Right click → Out (signal)
-Select → Data Format → Analog → Step
+🔗 **Image Reference:** [DAC Waveform](https://github.com/Gowtham007007/Week-2_RISC-V_Tapeout/blob/main/Images/dac_gtkwave.png)
 
+---
 
-🖼️ [📸 Add analog waveform image here]
+## 🧠 Analog Output Visualization in GTKWave
 
-The DAC output appears as a smooth real-valued waveform — a clear indication of accurate D/A conversion 🌀
+Right click → `Out (signal)`
 
-📈 Waveform Highlights
+Select → `Data Format → Analog → Step`
 
-✨ Summary of important signals:
+🔗 **Image Reference:** [Analog Waveform](https://github.com/Gowtham007007/Week-2_RISC-V_Tapeout/blob/main/Images/analogwave.png)
 
-Signal	Status	Meaning
-ENb_CP	Toggling	Active control logic
-ENb_VCO	Toggling	VCO enable control
-REF	Stable	Reference clock
-OUT	Periodic	System activity
-reset	Low	Normal operation
-VREFH/VREFL	3.3 V / 0 V	Proper reference bias
+💖 DAC output appears as a **smooth real-valued waveform**, showing accurate D/A conversion 🌀
 
-✅ Simulation ends with $finish — no errors encountered!
+---
 
-🏁 🎯 Conclusion
+## 📈 Waveform Highlights
 
-The Pre-Synthesis Simulation of VSDBabySoC 💡 was completed successfully.
-All control, clock, and analog signals behaved as expected.
-The DAC produced valid analog outputs, confirming a fully functional SoC design ✅
+✨ Key Observations:
 
-💖 A perfect balance of Digital & Analog harmony — verified and ready for synthesis! 💫
+| Signal | Status | Meaning |
+| --- | --- | --- |
+| ENb_CP | Toggling | Active control logic |
+| ENb_VCO | Toggling | VCO enable control |
+| REF | Stable | Reference clock |
+| OUT | Periodic | System output activity |
+| reset | Low | Normal operation |
+| VREFH/VREFL | 3.3 V / 0 V | Reference bias correct |
 
-🧰 Tools Used
-Tool	Purpose
-🧠 Icarus Verilog	RTL Simulation
-📊 GTKWave	Waveform Viewer
-⚙️ SandPiper-SaaS	TL-Verilog Conversion
-🐍 Python 3 + venv	Environment Management
-💻 Ubuntu/Linux	Execution Platform
+✅ Simulation ends cleanly with `$finish`. No errors!
+
+---
+
+## 🏁 🎯 Conclusion
+
+The **Pre-Synthesis Simulation** of **VSDBabySoC 💡** was **completed successfully**.
+
+- Control, clock, and DAC signals behaved correctly
+- DAC produced valid analog outputs 🌊
+- Design is **functional, stable, and ready for synthesis ✅**
+
+💖 A perfect balance of **Digital & Analog harmony** — verified and ready for the next step! ✨
+
+---
+
+## 🧰 Tools Used
+
+| Tool | Purpose |
+| --- | --- |
+| 🧠 Icarus Verilog | RTL Simulation |
+| 📊 GTKWave | Waveform Viewer |
+| ⚙️ SandPiper-SaaS | TL-Verilog Conversion |
+| 🐍 Python 3 + venv | Environment Management |
+| 💻 Ubuntu/Linux | Execution Platform |
