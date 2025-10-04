@@ -1,44 +1,48 @@
-🌈✨ Task 2 – Pre-Synthesis Simulation of VSDBabySoC
+<div align = center >
+  
+   # 🌈✨ Task 2 – Pre-Synthesis Simulation of VSDBabySoC
+</div>
 <p align="center"> <img src="https://img.shields.io/badge/Language-Verilog-blue?style=for-the-badge&logo=verilog" /> <img src="https://img.shields.io/badge/Simulator-Icarus%20Verilog-green?style=for-the-badge&logo=github" /> <img src="https://img.shields.io/badge/Waveform-GTKWave-purple?style=for-the-badge&logo=gnuplot" /> <img src="https://img.shields.io/badge/OS-Linux%20%7C%20macOS-orange?style=for-the-badge&logo=linux" /> <img src="https://img.shields.io/badge/Project-VSDBabySoC-red?style=for-the-badge&logo=riscv" /> </p>
-👋 Welcome to Task 2!
+
+## 👋 Welcome to Task 2!
 
 In this stage of your SoC Design Journey 🚀, we perform a Pre-Synthesis Simulation of the VSDBabySoC using Icarus Verilog 🧠 and GTKWave 📊.
 This task validates functional behavior before synthesis 🧩, ensuring our RISC-V–based SoC behaves exactly as intended.
 
 🏗️ Step 1: Environment Setup
-# 📂 Navigate to the project directory
+## 📂 Navigate to the project directory
 cd ~/Desktop/VLSI/VSDBabySoC
 
-# 🌐 Clone the repository
+## 🌐 Clone the repository
 git clone https://github.com/manili/VSDBabySoC.git
 
 
 🖼️ [📸 Add your screenshot of successful cloning here]
 
 🧩 Step 2: Python Virtual Environment Setup
-# 🔧 Install dependencies
+## 🔧 Install dependencies
 sudo apt update
 sudo apt install python3-venv python3-pip
 
-# 🪄 Create & activate virtual environment
+## 🪄 Create & activate virtual environment
 cd ~/VLSI/VSDBabySoC/
 python3 -m venv sp_env
 source sp_env/bin/activate
 
-# ⚡ Install SandPiper-SaaS
+## ⚡ Install SandPiper-SaaS
 pip install pyyaml click sandpiper-saas
 
-# 🧠 Convert TL-Verilog → Verilog
+## 🧠 Convert TL-Verilog → Verilog
 sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
 
 
 🖼️ [📸 Add your SandPiper conversion result image here]
 
 ⚙️ Step 3: Pre-Synthesis Simulation Process
-# 🗂️ Go to module directory
+## 🗂️ Go to module directory
 cd VLSI/VSDBabySoC/src/module
 
-# 🏗️ Run Icarus Verilog simulation
+## 🏗️ Run Icarus Verilog simulation
 iverilog \
   -o /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out \
   -DPRE_SYNTH_SIM \
@@ -46,16 +50,16 @@ iverilog \
   -I /home/username/Desktop/VLSI/VSDBabySoC/src/module \
   /home/username/Desktop/VLSI/VSDBabySoC/src/module/testbench.v
 
-# 📦 Create output directory
+## 📦 Create output directory
 mkdir -p /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim
 
-# ✅ Verify build output
+## ✅ Verify build output
 ls -l /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out
 
-# ▶️ Execute simulation
+## ▶️ Execute simulation
 vvp /home/username/Desktop/VLSI/VSDBabySoC/output/pre_synth_sim/pre_synth_sim.out
 
-# 🌈 View in GTKWave
+## 🌈 View in GTKWave
 gtkwave pre_synth_sim.vcd
 
 
