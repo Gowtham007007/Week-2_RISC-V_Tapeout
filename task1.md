@@ -1,8 +1,13 @@
-# 🌟 Week 2, Task 1: Exploring System on Chip (SoC) Design with VSDBabySoC
+<div align="center">
+    
+# 🌟✨ Week 2 – Task 1: Exploring SoC Design with VSDBabySoC
 
-👋 Hey there! Welcome to **Week 2, Task 1** of my **SoC Design Journey** 💫
+</div> <p align="center"> <img src="https://img.shields.io/badge/Topic-SoC-blue?style=for-the-badge&logo=arduino" />  <img src="https://img.shields.io/badge/Language-Verilog-red?style=for-the-badge&logo=verilog" /> <img src="https://img.shields.io/badge/Simulation-GTKWave-purple?style=for-the-badge&logo=gnuplot" /> <img src="https://img.shields.io/badge/Project-VSDBabySoC-green?style=for-the-badge&logo=riscv" /> <img src="https://img.shields.io/badge/OS-Linux%20%7C%20macOS-orange?style=for-the-badge&logo=linux" /> </p>
+👋 Welcome to Task 1!
 
-This part of my exploration is dedicated to understanding what makes a **System on Chip (SoC)** so powerful — and how all its tiny digital and analog blocks come together in perfect harmony 🎶
+In this stage of my SoC Design Journey 🚀, we explore the VSDBabySoC — a tiny yet powerful RISC-V SoC 💎
+
+This task introduces the core concepts of SoC design, explains key components like CPU, PLL, and DAC, and shows how digital and analog blocks work together in perfect harmony 🎶�
 
 Here, I studied the open-source **VSDBabySoC**, a mini yet mighty 💪 RISC-V–based SoC that bridges theory and practical design. Through this, I learned how **CPUs, PLLs, and DACs** interact, synchronize, and communicate to form the heart of an embedded system ❤️‍🔥
 
