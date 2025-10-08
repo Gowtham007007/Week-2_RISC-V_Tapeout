@@ -43,7 +43,7 @@ Gain a solid foundation in SoC architecture and learn how different hardware mod
 
 📘 In short, this task builds your conceptual backbone for SoC design — how each block fits together like puzzle pieces to form a functional chip!
 
-👉 [**🧾 Read Task 1 Summary & Explanation**](https://github.com/harishj123/RISC-V_Soc_Tape_out_week_2/blob/main/Week_2/task_1.md)
+👉 [**🧾 Read Task 1 Summary & Explanation**](https://github.com/Gowtham007007/Week-2_RISC-V_Tapeout/blob/main/task1.md)
 
 ---
 
@@ -82,7 +82,7 @@ By completing this task, you’ll:
 
 ✅ Strengthen your Verilog debugging and visualization skills
 
-👉 [**🔬 Explore Task 2 Simulation & Verification Guide**](https://github.com/harishj123/RISC-V_Soc_Tape_out_week_2/blob/main/Week_2/task_2.md)
+👉 [**🔬 Explore Task 2 Simulation & Verification Guide**](https://github.com/Gowtham007007/Week-2_RISC-V_Tapeout/blob/main/task2.md)
 
 ---
 
